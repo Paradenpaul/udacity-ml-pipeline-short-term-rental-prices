@@ -3,4 +3,4 @@ conda_env: conda.yml
 
 entry_points:
   main:
-    command: jupyter notebook
+    command: /home/paradenpaul/miniconda3/envs/nyc_airbnb_dev/bin/jupyter notebook
