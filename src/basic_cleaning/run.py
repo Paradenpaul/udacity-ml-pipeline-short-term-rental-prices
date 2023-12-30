@@ -37,6 +37,10 @@ def go(args):
     # recast 'last_review' column
     df['last_review'] = pd.to_datetime(df['last_review'])
 
+    # insertion for release 1.0.1
+    idx = df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)
+    df = df[idx].copy()
+
     logger.info("Upload Aritifact to W&B.")
 
     df.to_csv("clean_sample.csv", index=False)
